@@ -40,5 +40,9 @@ defmodule PooldoWeb.Endpoint do
     key: "_pooldo_key",
     signing_salt: "mAxG3wmD"
 
+  plug Corsica,
+    origins: "http://localhost:8080",
+    log: [rejected: :error, invalid: :warn, accepted: :debug]
+
   plug PooldoWeb.Router
 end
