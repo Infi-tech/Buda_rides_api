@@ -16,3 +16,6 @@ config :pooldo, PooldoWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# config bcrypt for passwords
+config :bcrypt_elixir, :log_rounds, 4
