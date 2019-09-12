@@ -10,7 +10,7 @@ defmodule PooldoWeb.Router do
     plug :ensure_authenticated
   end
 
-   scope "/api", MyAppWeb do
+   scope "/api", PooldoWeb do
     pipe_through :api
     post "/users/sign_in", UserController, :sign_in
   end
