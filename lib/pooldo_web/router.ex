@@ -8,5 +8,6 @@ defmodule PooldoWeb.Router do
   scope "/api", PooldoWeb do
     pipe_through :api
     resources "/users", UserController, except: [:new, :edit]
+    post "/users/sign_in", UserController, :sign_in
   end
 end

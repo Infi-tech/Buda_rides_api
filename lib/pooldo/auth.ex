@@ -116,7 +116,7 @@ defmodule Pooldo.Auth do
   end
 
 
-  defp verify_ppassword(user,password) do
+  defp verify_password(user,password) do
     if Bcrypt.verify_pass(password, user.password_hash)do
       {:ok, user}
     else
