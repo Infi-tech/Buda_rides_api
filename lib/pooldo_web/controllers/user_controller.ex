@@ -11,6 +11,9 @@ defmodule PooldoWeb.UserController do
     render(conn, "index.json", users: users)
   end
 
+
+
+
   def create(conn, %{"user" => user_params}) do
     with {:ok, %User{} = user} <- Auth.create_user(user_params) do
       conn
